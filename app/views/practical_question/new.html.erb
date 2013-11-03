@@ -1,0 +1,27 @@
+<div>
+	<h2>Crear Preguntas Practicas</h2>
+
+	<%= form_for(:practical_question, :url => {:action => 'create'}) do |f| %>
+		<table>
+		<tr>
+			<th>Pregunta</th>
+			<td><%= f.text_field(:question) %></td>
+		</tr>
+		<tr>
+			<th>Tiempo</th>
+			<td><%= f.number_field(:time) %></td>
+		</tr>
+		<tr>
+			<th>Valor</th>
+			<td><%= f.number_field(:value) %></td>
+		</tr>
+		<tr>
+			<th>Recurso</th>
+			<td><%= f.file_field(:resource) %></td>
+		</tr>
+	</table>
+	<div>
+		<%= submit_tag("Crear Pregunta Practica") %>
+	</div>
+	<% end %>
+</div>

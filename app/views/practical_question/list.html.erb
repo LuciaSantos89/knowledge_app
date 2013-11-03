@@ -1,0 +1,26 @@
+<div>
+	<h2>Preguntas Practicas</h2>
+	<table>
+		<tr>
+			<th>&nbsp;</th>
+			<th>Pregunta</th>
+			<th>Tiempo</th>
+			<th>Valor</th>
+			<th>Recurso</th>
+		</tr>
+
+		<% @practical_questions.each do |practical_question| %>
+		<tr>
+			<td><%= practical_question.id %></td>
+			<td><%= practical_question.question %></td>
+			<td><%= practical_question.time %></td>
+			<td><%= practical_question.value %></td>
+			<td><%= practical_question.resource %></td>
+			<td>
+				<%= link_to("Edit", {:action => "edit", :id => practical_question.id}) %>
+				<%= link_to("Delete", {:action => "destroy", :id => practical_question.id}) %>
+			</td>
+		</tr>
+		<% end %>
+	</table>
+</div>
