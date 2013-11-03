@@ -1,31 +1,20 @@
-<style type="text/css">
-  #trJMenu td { white-space: nowrap; width: auto; }
-  #trJMenu li { white-space: nowrap; width: auto; }
-</style>
+<script type="text/javascript">
+  var count=30;
 
+var counter=setInterval(timer, 1000); //1000 will  run it every 1 second
 
-<script language="javascript" type="text/javascript">
-  $(document).ready(function(){
-    $("#trJMenu").menu( { position: { my: "left top", at: "center bottom" } } );          
-  });
+function timer()
+{
+  count=count-1;
+  if (count <= 0)
+  {
+     clearInterval(counter);
+     //counter ended, do something here
+     return;
+  }
+
+  document.getElementById("timer").innerHTML=count + " secs";
+}
 </script>
 
-
-<table>
-  <tr id='trJMenu'>
-    <td>
-      <a href='#'>Timesheets</a>
-      <ul>
-        <li><a href='#'>Labour</a></li>
-        <li><a href='#'>Chargeout Report</a></li>
-      </ul>
-    </td>
-    <td>
-      <a href='#'>Activity Management</a>
-      <ul>
-        <li><a href='#'>Activities</a></li>
-        <li><a href='#'>Proposals</a></li>
-      </ul>
-    </td>
-  </tr>
-</table>
+<span id="timer"></span>
