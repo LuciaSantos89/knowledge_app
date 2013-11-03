@@ -1,0 +1,28 @@
+<div>
+	<h2>Games</h2>
+	<table>
+		<tr>
+			<th>&nbsp;</th>
+			<th>Game</th>
+			<th>Equipos</th>
+			<th>En progreso</th>
+			<th>Pregunta Practica Actual</th>
+			<th>Pop Question Actual</th>
+
+		</tr>
+
+		<% @games.each do |game| %>
+		<tr>
+			<td><%= game.id %></td>
+			<td><%= game.teams %></td>
+			<td><%= game.inProgress %></td>
+			<td><%= game.activePracticalQuestion %></td>
+			<td><%= game.activePopQuestion %></td>
+			<td>
+				<%= link_to("Edit", {:action => "edit", :id => game.id}) %>
+				<%= link_to("Delete", {:action => "destroy", :id => game.id}) %>
+			</td>
+		</tr>
+		<% end %>
+	</table>
+</div>

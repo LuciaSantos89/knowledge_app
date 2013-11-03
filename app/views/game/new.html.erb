@@ -1,0 +1,21 @@
+<div>
+	<h2>Nuevo Juego</h2>
+
+	<%= form_for(:game, :url => {:action => 'create'}) do |f| %>
+		<table>
+		<tr>
+			<th>Equipos</th>
+			<td><%= f.text_field(:teams) %></td>
+			<th>En progreso</th>
+			<td><%= f.check_box(:inProgress) %></td>
+			<th>Pregunta Practica</th>
+			<td><%= f.number_field(:activePracticalQuestion) %></td>
+			<th>Pop</th>
+			<td><%= f.number_field(:activePopQuestion) %></td>
+		</tr>
+	</table>
+	<div>
+		<%= submit_tag("Empezar Juego") %>
+	</div>
+	<% end %>
+</div>

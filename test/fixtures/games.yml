@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  inProgress: false
+  teams: MyString
+  activePracticalQuestion: 
+  activePopQuestion: 
+
+two:
+  inProgress: false
+  teams: MyString
+  activePracticalQuestion: 
+  activePopQuestion: 
