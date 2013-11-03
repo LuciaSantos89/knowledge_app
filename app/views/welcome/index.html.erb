@@ -1,0 +1,22 @@
+
+<ul id="menu">	
+		<li ><a href="#">Equipos</a>
+			<ul>
+				<li><%= link_to("Agregar", {:action => "../equipo/new"}) %></li>
+				<li><%= link_to("Listar", {:action => "../equipo/list"}) %></li>
+			</ul>
+		</li>
+		<li ><a href="#">Pregutnas Practicas</a>
+			<ul>
+				<li><%= link_to("Agregar", {:action => "../practical_question/new"}) %></li>
+				<li><%= link_to("Listar", {:action => "../practical_question/list"}) %></li>
+			</ul>
+		</li>
+		<li ><a href="#">Pop Question</a>
+			<ul>
+				<li><%= link_to("Agregar", {:action => "../pop_question/new"}) %></li>
+				<li><%= link_to("Listar", {:action => "../pop_question/list"}) %></li>
+			</ul><a href="#">
+		</li>
+	
+</ul>
