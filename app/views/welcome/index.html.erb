@@ -1,22 +1,27 @@
-
-<ul id="menu">	
-		<li ><a href="#">Equipos</a>
-			<ul>
-				<li><%= link_to("Agregar", {:action => "../equipo/new"}) %></li>
-				<li><%= link_to("Listar", {:action => "../equipo/list"}) %></li>
-			</ul>
-		</li>
-		<li ><a href="#">Pregutnas Practicas</a>
-			<ul>
-				<li><%= link_to("Agregar", {:action => "../practical_question/new"}) %></li>
-				<li><%= link_to("Listar", {:action => "../practical_question/list"}) %></li>
-			</ul>
-		</li>
-		<li ><a href="#">Pop Question</a>
-			<ul>
-				<li><%= link_to("Agregar", {:action => "../pop_question/new"}) %></li>
-				<li><%= link_to("Listar", {:action => "../pop_question/list"}) %></li>
-			</ul><a href="#">
-		</li>
-	
-</ul>
+	<nav>
+		<ul id="menu">	
+			<li ><%= link_to("Equipos", "#") %>
+				<ul>
+					<li><%= link_to("Agregar", {:controller => 'equipo', :action => "new"}) %></li>
+					<li><%= link_to("Listar", {:controller => 'equipo', :action => "list"}) %></li>
+				</ul>
+			</li>
+			<li ><%= link_to("Preguntas Practicas", "#") %>
+				<ul>
+					<li><%= link_to("Agregar", {:controller => 'practical_question', :action => "new"}) %></li>
+					<li><%= link_to("Listar", {:controller => 'practical_question', :action => "list"}) %></li>
+				</ul>
+			</li>
+			<li > <%= link_to("Pop Questions", "#") %>
+				<ul>
+					<li><%= link_to("Agregar", {:controller => 'pop_question', :action => "new"}) %></li>
+					<li><%= link_to("Listar", {:controller => 'pop_question', :action => "list"}) %></li>
+				</ul>
+			</li>
+			<li><%= link_to("About", :action => 'about') %></li>
+		</ul>
+	</nav>
+	<section id="main">
+		<article>Foto</article>
+		<article><%= link_to("Empezar Juego", :controller => 'game', :action => 'new') %></article>
+	</section>
