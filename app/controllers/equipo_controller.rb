@@ -1,4 +1,6 @@
 class EquipoController < ApplicationController
+	def index
+	end
 	def create
 		@equipo = Equipo.new( params.require(:equipo).permit(:name) )
 		if @equipo.save
