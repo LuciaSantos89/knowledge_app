@@ -15,6 +15,7 @@
 #menu li { 
 	display: inline;
 	float: left;
+	margin: 10px;
 }
 
 #menu li ul li { 

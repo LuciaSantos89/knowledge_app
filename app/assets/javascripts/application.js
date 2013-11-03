@@ -16,5 +16,5 @@
 //= require_tree .
 
 $(function(){
-    $("#menu").menu();
+    $("#menu").menu({ position: { my: "left top", at: "center bottom" } });
 });
