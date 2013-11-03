@@ -2,7 +2,8 @@ class EquipoController < ApplicationController
 	def index
 	end
 	def create
-		@equipo = Equipo.new( params.require(:equipo).permit(:name) )
+		@equipo = Equipo.new( params.require(:equipo).permit(:name))
+		@equipo.score = 0;
 		if @equipo.save
 			redirect_to(:action => 'new')
 		else
