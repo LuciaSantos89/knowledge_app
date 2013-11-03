@@ -26,5 +26,18 @@ class GameController < ApplicationController
 	end
 	def start
 		@game = Game.find (params[:id])
+		@equipos = []
+		@team_array = @game.teams.split(/,/).map {|chr| chr.to_i}
+
+		@team_array.each do |team|
+			
+				@equipos.push(Equipo.find(team));
+			
+			
+		end
+
+		
+
+
 	end
 end

@@ -1,3 +1,13 @@
 <h1>THE KNOWLEDGE BOWL</h1>
 
 <h2><%= @game.id %></h2>
+<table>
+<% @equipos.each do |equipo| %>
+		<tr>
+			<td><%= equipo.id %></td>
+			<td><%= equipo.name %></td>
+			
+			
+			</tr>
+<% end %>
+</table>
