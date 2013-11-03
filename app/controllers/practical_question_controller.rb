@@ -1,4 +1,6 @@
 class PracticalQuestionController < ApplicationController
+	def index
+	end
 	def create
 		@practical_question = PracticalQuestion.new( params.require(:practical_question).permit(:question, :time, :value, :resource) )
 		if @practical_question.save

@@ -1,4 +1,6 @@
 class PopQuestionController < ApplicationController
+	def index
+	end
 	def create
 		@pop_question = PopQuestion.new( params.require(:pop_question).permit(:question, :answer) )
 		if @pop_question.save
