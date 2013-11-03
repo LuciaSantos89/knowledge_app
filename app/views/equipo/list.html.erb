@@ -1,0 +1,24 @@
+<div>
+	<h2>Equipos</h2>
+	<table>
+		<tr>
+			<th>&nbsp;</th>
+			<th>Equipo</th>
+			<th>Puntuacion</th>
+			<th>Actions</th>
+
+		</tr>
+
+		<% @equipos.each do |equipo| %>
+		<tr>
+			<td><%= equipo.id %></td>
+			<td><%= equipo.name %></td>
+			<td><%= equipo.score %></td>
+			<td>
+				<%= link_to("Edit", {:action => "edit", :id => equipo.id}) %>
+				<%= link_to("Delete", {:action => "destroy", :id => equipo.id}) %>
+			</td>
+		</tr>
+		<% end %>
+	</table>
+</div>

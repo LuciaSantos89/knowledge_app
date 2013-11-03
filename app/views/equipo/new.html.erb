@@ -1,0 +1,15 @@
+<div>
+	<h2>Crear Equipos</h2>
+
+	<%= form_for(:equipo, :url => {:action => 'create'}) do |f| %>
+		<table>
+		<tr>
+			<th>Nombre</th>
+			<td><%= f.text_field(:name) %></td>
+		</tr>
+	</table>
+	<div>
+		<%= submit_tag("Crear Equipo") %>
+	</div>
+	<% end %>
+</div>
